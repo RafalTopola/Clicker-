@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://0oln7vwayml6"]
+
+[ext_resource type="Script" uid="uid://c03mybcp0lhde" path="res://Main.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://dkrv0dvj068x7" path="res://icon_temp/click.svg" id="2_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://cnn5tdcdr6pot" path="res://icon_temp/shop.svg" id="3_kdubu"]
+[ext_resource type="Texture2D" uid="uid://corx2xonyywh6" path="res://icon_temp/buff_1.svg" id="4_d21ai"]
+[ext_resource type="Texture2D" uid="uid://d1ttju3x22inw" path="res://icon_temp/close.svg" id="5_rj586"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wtcfe")
+
+[node name="ScoreLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 319.0
+offset_top = 139.0
+offset_right = 441.0
+offset_bottom = 218.0
+
+[node name="ClickButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 255.0
+offset_right = 407.0
+offset_bottom = 331.0
+icon = ExtResource("2_q6r6c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ShopButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -118.0
+offset_top = 25.0
+offset_right = -46.0
+offset_bottom = 130.0
+grow_horizontal = 0
+icon = ExtResource("3_kdubu")
+
+[node name="ShopPanel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -428.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/ShopPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ShopPanel/ScrollContainer"]
+layout_mode = 2
+
+[node name="BuyButton" type="Button" parent="CanvasLayer/ShopPanel/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+icon = ExtResource("4_d21ai")
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/ShopPanel"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 567.0
+offset_right = 401.0
+offset_bottom = 641.0
+icon = ExtResource("5_rj586")
