@@ -1,30 +1,58 @@
-[gd_scene load_steps=6 format=3 uid="uid://0oln7vwayml6"]
+[gd_scene load_steps=9 format=3 uid="uid://0oln7vwayml6"]
 
 [ext_resource type="Script" uid="uid://c03mybcp0lhde" path="res://Main.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://cqxpjurax1itf" path="res://Pokoj_Nerda.png" id="2_kdubu"]
 [ext_resource type="Texture2D" uid="uid://dkrv0dvj068x7" path="res://icon_temp/click.svg" id="2_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://cnn5tdcdr6pot" path="res://icon_temp/shop.svg" id="3_kdubu"]
-[ext_resource type="Texture2D" uid="uid://corx2xonyywh6" path="res://icon_temp/buff_1.svg" id="4_d21ai"]
+[ext_resource type="Texture2D" uid="uid://c7xht314quir7" path="res://Grafiki/Ulepszenia (przedmioty)/MaskaFreddy.png" id="3_rj586"]
+[ext_resource type="Texture2D" uid="uid://cn6d8q4gf5mxe" path="res://Grafiki/Ulepszenia (przedmioty)/Puppet.png" id="4_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://erwp3df4whqk" path="res://Grafiki/Ulepszenia (przedmioty)/PurpleGuy.png" id="5_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://d1ttju3x22inw" path="res://icon_temp/close.svg" id="5_rj586"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 script = ExtResource("1_wtcfe")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_kdubu")
+
+[node name="MaskaFreddySprite" type="Sprite2D" parent="."]
+position = Vector2(1563.9999, 535)
+scale = Vector2(0.2138158, 0.20068808)
+texture = ExtResource("3_rj586")
+
+[node name="PuppetSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(379, 848)
+scale = Vector2(0.35449734, 0.34159482)
+texture = ExtResource("4_4d7sh")
+
+[node name="PurpleGuySprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1054, 354.99997)
+scale = Vector2(0.31072453, 0.33528647)
+texture = ExtResource("5_ir8iy")
 
 [node name="ScoreLabel" type="Label" parent="."]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
-offset_left = 319.0
-offset_top = 139.0
-offset_right = 441.0
-offset_bottom = 218.0
+offset_left = 517.0
+offset_top = 337.0
+offset_right = 946.0
+offset_bottom = 442.0
 
 [node name="ClickButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 335.0
-offset_top = 255.0
-offset_right = 407.0
-offset_bottom = 331.0
+offset_left = 524.0
+offset_top = 467.0
+offset_right = 761.0
+offset_bottom = 675.0
 icon = ExtResource("2_q6r6c")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -33,10 +61,10 @@ icon = ExtResource("2_q6r6c")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -118.0
-offset_top = 25.0
-offset_right = -46.0
-offset_bottom = 130.0
+offset_left = -123.0
+offset_top = 51.0
+offset_right = -51.0
+offset_bottom = 156.0
 grow_horizontal = 0
 icon = ExtResource("3_kdubu")
 
@@ -45,7 +73,8 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -428.0
+offset_left = -713.0
+offset_right = -2.0
 grow_horizontal = 0
 grow_vertical = 2
 
@@ -54,22 +83,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -83.0
+offset_right = -161.0
+offset_bottom = -180.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ShopPanel/ScrollContainer"]
 layout_mode = 2
-
-[node name="BuyButton" type="Button" parent="CanvasLayer/ShopPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-icon = ExtResource("4_d21ai")
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="CloseButton" type="Button" parent="CanvasLayer/ShopPanel"]
 layout_mode = 0
-offset_left = 333.0
-offset_top = 567.0
-offset_right = 401.0
-offset_bottom = 641.0
+offset_left = 590.0
+offset_top = 956.0
+offset_right = 662.0
+offset_bottom = 1030.0
 icon = ExtResource("5_rj586")

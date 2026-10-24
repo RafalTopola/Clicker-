@@ -10,11 +10,12 @@ var base_cost: float
 var cost_multiplier: float
 var effect_type: TYPE
 var effect_value: float
+var icon_path: String # <-- Nowość: ścieżka do ikonki
 
 var level: int = 0
 var current_cost: float
 
-func _init(_id: int, _name: String, _description: String, _cost: float, _mult: float, _type: TYPE, _value: float):
+func _init(_id: int, _name: String, _description: String, _cost: float, _mult: float, _type: TYPE, _value: float, _icon: String = ""):
 	self.id = _id
 	self.item_name = _name
 	self.description = _description
@@ -22,6 +23,7 @@ func _init(_id: int, _name: String, _description: String, _cost: float, _mult: f
 	self.cost_multiplier = _mult
 	self.effect_type = _type
 	self.effect_value = _value
+	self.icon_path = _icon
 	self.current_cost = _cost
 
 func buy() -> bool:

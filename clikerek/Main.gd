@@ -47,11 +47,12 @@ func _define_upgrades():
 #    - TYPE.CLICK_VALUE_MULT    -> Dodaje do mnożnika wartości kliknięcia (np. +0.1 = +10%)
 #    - TYPE.CLICK_AMOUNT_FLAT   -> Zwiększa liczbę punktów/mnożnik ilości kliknięć (np. +1)
 # 7. Wartość efektu (float): Siła bonusu aplikowana przy każdym zakupie
+# 8. Ścieszka do ikonki
 # ==============================================================================
 	
-	all_upgrades.append(UpgradeItem.new(1, "Słaby Składnik", "Mały pasywny przychód.", 10.0, 1.15, UpgradeItem.TYPE.PASSIVE_INCOME, 0.5))
-	all_upgrades.append(UpgradeItem.new(2, "Miedziany Kocioł", "Lepszy pasywny przychód.", 50.0, 1.2, UpgradeItem.TYPE.PASSIVE_INCOME, 2.0))
-	all_upgrades.append(UpgradeItem.new(3, "Mocniejsza Ręka", "Twoje kliknięcia liczą się podwójnie.", 100.0, 1.5, UpgradeItem.TYPE.CLICK_AMOUNT_FLAT, 1))
+	all_upgrades.append(UpgradeItem.new(1, "Słaby Składnik", "Mały pasywny przychód.", 10.0, 1.15, UpgradeItem.TYPE.PASSIVE_INCOME, 0.5, "res://Grafiki/Ulepszenia (przedmioty)/MaskaFreddy.png"))
+	all_upgrades.append(UpgradeItem.new(2, "Miedziany Kocioł", "Lepszy pasywny przychód.", 50.0, 1.2, UpgradeItem.TYPE.PASSIVE_INCOME, 2.0, "res://Grafiki/Ulepszenia (przedmioty)/Puppet.png"))
+	all_upgrades.append(UpgradeItem.new(3, "Mocniejsza Ręka", "Twoje kliknięcia liczą się podwójnie.", 100.0, 1.5, UpgradeItem.TYPE.CLICK_AMOUNT_FLAT, 1, "res://Grafiki/Ulepszenia (przedmioty)/PurpleGuy.png"))
 	all_upgrades.append(UpgradeItem.new(5, "Lepszy Wzmacniacz", "Stały bonus do wartości kliknięcia.", 75.0, 1.2, UpgradeItem.TYPE.CLICK_VALUE_FLAT, 1.0))
 	all_upgrades.append(UpgradeItem.new(6, "Błyskawiczny Mnożnik", "Każde kliknięcie jest o 10% mocniejsze.", 200.0, 1.3, UpgradeItem.TYPE.CLICK_VALUE_MULT, 0.1))
 
@@ -59,15 +60,41 @@ func _populate_shop():
 	for upgrade in all_upgrades:
 		var btn = Button.new()
 		btn.name = "UpgradeButton_" + str(upgrade.id)
-		btn.custom_minimum_size = Vector2(0, 50) 
-		btn.text = upgrade.item_name + " - Poz. " + str(upgrade.level) + " (" + str(snapped(upgrade.current_cost, 0.1)) + ")"
+		btn.custom_minimum_size = Vector2(0, 60)
+		btn.text = " " + upgrade.item_name + " - Poz. " + str(upgrade.level) + " (" + str(snapped(upgrade.current_cost, 0.1)) + ")"
 		btn.tooltip_text = upgrade.description
+		
+		# Sprawdzenie i wczytanie ikony
+		if upgrade.icon_path != "":
+			var texture = load(upgrade.icon_path)
+			if texture:
+				btn.icon = texture
+				btn.expand_icon = true
+				print("Sukces: Załadowano ikonę dla ", upgrade.item_name)
+			else:
+				print("BŁĄD: Nie udało się załadować tekstury ze ścieżki: ", upgrade.icon_path)
+		
 		btn.pressed.connect(_on_upgrade_bought.bind(upgrade, btn))
 		upgrades_container.add_child(btn)
 
 func _on_upgrade_bought(upgrade: UpgradeItem, button_instance: Button):
 	if upgrade.buy():
 		button_instance.text = upgrade.item_name + " - Poz. " + str(upgrade.level) + " (" + str(snapped(upgrade.current_cost, 0.1)) + ")"
+	_check_visual_unlocks(upgrade.id)
+	
+func _check_visual_unlocks(upgrade_id: int):
+	match upgrade_id:
+		1:
+			# Jeśli kupiono ID 1 (Słaby Składnik / Maska Freddy'ego)
+			if has_node("MaskaFreddySprite"):
+				$MaskaFreddySprite.visible = true
+		2:
+			# Jeśli kupiono ID 2 (Miedziany Kocioł / Puppet itp.)
+			if has_node("PuppetSprite"):
+				$PuppetSprite.visible = true
+		3:
+			if has_node("PurpleGuySprite"):
+				$PurpleGuySprite.visible = true
 
 func _on_click_pressed() -> void:
 	GameManager.handle_click()
