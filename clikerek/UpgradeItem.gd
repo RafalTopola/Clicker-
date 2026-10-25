@@ -47,5 +47,23 @@ func apply_effect():
 			GameManager.add_click_amount_flat(int(base_power))
 
 func evolve_tier():
-	item_tier += 1
-	base_power *= 2.0 # Każdy tier podwaja skuteczność bazową ulepszenia!
+	if item_tier < 3:
+		item_tier += 1
+		base_power *= 2.0
+		
+		# Unikalne ścieżki dla każdego ID i Tieru:
+		if id == 1:
+			if item_tier == 2: icon_path = "res://Grafiki/Ulepszenia (przedmioty)/Puppet.png"
+			elif item_tier == 3: icon_path = "res://Grafiki/Ulepszenia (przedmioty)/PurpleGuy.png"
+		elif id == 2:
+			if item_tier == 2: icon_path = "res://Grafiki/Ulepszenia (przedmioty)/GlobalElite.png"
+			elif item_tier == 3: icon_path = "res://Grafiki/Ulepszenia (przedmioty)/Kurczak.png"
+		elif id == 3:
+			if item_tier == 2: icon_path = "res://Grafiki/Ulepszenia (przedmioty)/Batarang.png"
+			elif item_tier == 3: icon_path = "res://Grafiki/Ulepszenia (przedmioty)/PierscienZL.png"
+		elif id == 4: # Lepszy Wzmacniacz
+			if item_tier == 2: icon_path = "res://Grafiki/Ulepszenia (przedmioty)/DiamentowyMiecz.png"
+			elif item_tier == 3: icon_path = "res://Grafiki/Ulepszenia (przedmioty)/NetheriteMiecz.png"
+		elif id == 5: # Błyskawiczny Mnożnik (po mieczu świetlnym / Star Wars)
+			if item_tier == 2: icon_path = "res://Grafiki/Ulepszenia (przedmioty)/Plaszcz.png"
+			elif item_tier == 3: icon_path = "res://Grafiki/Ulepszenia (przedmioty)/Holocron.png"

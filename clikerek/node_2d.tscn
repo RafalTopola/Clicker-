@@ -1,14 +1,26 @@
-[gd_scene load_steps=10 format=3 uid="uid://0oln7vwayml6"]
+[gd_scene load_steps=22 format=3 uid="uid://0oln7vwayml6"]
 
 [ext_resource type="Script" uid="uid://c03mybcp0lhde" path="res://Main.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://cqxpjurax1itf" path="res://Pokoj_Nerda.png" id="2_kdubu"]
 [ext_resource type="Texture2D" uid="uid://dkrv0dvj068x7" path="res://icon_temp/click.svg" id="2_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://cnn5tdcdr6pot" path="res://icon_temp/shop.svg" id="3_kdubu"]
-[ext_resource type="Texture2D" uid="uid://c7xht314quir7" path="res://Grafiki/Ulepszenia (przedmioty)/MaskaFreddy.png" id="3_rj586"]
-[ext_resource type="Texture2D" uid="uid://cn6d8q4gf5mxe" path="res://Grafiki/Ulepszenia (przedmioty)/Puppet.png" id="4_4d7sh"]
-[ext_resource type="Texture2D" uid="uid://erwp3df4whqk" path="res://Grafiki/Ulepszenia (przedmioty)/PurpleGuy.png" id="5_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://br623eqtt0mh1" path="res://Grafiki/Ulepszenia (przedmioty)/MaskaFreddy.png" id="3_rj586"]
+[ext_resource type="Texture2D" uid="uid://c6xxcwmuehdi5" path="res://Grafiki/Ulepszenia (przedmioty)/Puppet.png" id="4_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://dn8kmprw5elpb" path="res://Grafiki/Ulepszenia (przedmioty)/PurpleGuy.png" id="5_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://d1ttju3x22inw" path="res://icon_temp/close.svg" id="5_rj586"]
+[ext_resource type="Texture2D" uid="uid://deup2oqe5ntlg" path="res://Grafiki/Ulepszenia (przedmioty)/AWP.png" id="6_7vxoj"]
+[ext_resource type="Texture2D" uid="uid://cb3trn2b1h10q" path="res://Grafiki/Ulepszenia (przedmioty)/GlobalElite.png" id="7_ei405"]
+[ext_resource type="Texture2D" uid="uid://djgwoevb6ug1g" path="res://Grafiki/Ulepszenia (przedmioty)/Kurczak.png" id="8_e8dv2"]
+[ext_resource type="Texture2D" uid="uid://bxdidu8vt6qp3" path="res://Grafiki/Ulepszenia (przedmioty)/SuperMan.png" id="9_2nhjh"]
 [ext_resource type="Texture2D" uid="uid://bda88n5kdx6r1" path="res://icon_temp/buff_2.svg" id="9_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://ctm7cx7kp8hm0" path="res://Grafiki/Ulepszenia (przedmioty)/Batarang.png" id="10_bjha6"]
+[ext_resource type="Texture2D" uid="uid://bh6fl33nbi4pf" path="res://Grafiki/Ulepszenia (przedmioty)/PierscienZL.png" id="11_gt76g"]
+[ext_resource type="Texture2D" uid="uid://b5537mlk1gmxp" path="res://Grafiki/Ulepszenia (przedmioty)/KamiennyMiecz.png" id="12_1fr6y"]
+[ext_resource type="Texture2D" uid="uid://dxltt38wppgwr" path="res://Grafiki/Ulepszenia (przedmioty)/DiamentowyMiecz.png" id="13_2hxjc"]
+[ext_resource type="Texture2D" uid="uid://cd2rlarqt07mo" path="res://Grafiki/Ulepszenia (przedmioty)/NetheriteMiecz.png" id="14_ebxd8"]
+[ext_resource type="Texture2D" uid="uid://dwkppix5ll5q3" path="res://Grafiki/Ulepszenia (przedmioty)/MieczSwietlny.png" id="15_2u7jv"]
+[ext_resource type="Texture2D" uid="uid://d6ye8fdhiljo" path="res://Grafiki/Ulepszenia (przedmioty)/Plaszcz.png" id="16_24dk6"]
+[ext_resource type="Texture2D" uid="uid://u4m4787qr5as" path="res://Grafiki/Ulepszenia (przedmioty)/Holocron.png" id="17_mryly"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -25,36 +37,108 @@ texture = ExtResource("2_kdubu")
 
 [node name="MaskaFreddySprite" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(1563.9999, 535)
+position = Vector2(169.00012, 97.00009)
 scale = Vector2(0.2138158, 0.20068808)
 texture = ExtResource("3_rj586")
 
 [node name="PuppetSprite" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(379, 848)
-scale = Vector2(0.35449734, 0.34159482)
+position = Vector2(387.5, 134.75003)
+scale = Vector2(0.24779536, 0.21928887)
 texture = ExtResource("4_4d7sh")
 
 [node name="PurpleGuySprite" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(1054, 354.99997)
-scale = Vector2(0.31072453, 0.33528647)
+position = Vector2(664.00006, 106)
+scale = Vector2(0.26189628, 0.2809245)
 texture = ExtResource("5_ir8iy")
+
+[node name="AWPSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(166, 305)
+scale = Vector2(0.16927083, 0.2037037)
+texture = ExtResource("6_7vxoj")
+
+[node name="GlobalEliteSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(448, 296)
+scale = Vector2(0.16041666, 0.19444445)
+texture = ExtResource("7_ei405")
+
+[node name="KurczakSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(674, 279)
+scale = Vector2(0.2138158, 0.20068808)
+texture = ExtResource("8_e8dv2")
+
+[node name="SuperManSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(172, 505.99994)
+scale = Vector2(0.19287367, 0.18190853)
+texture = ExtResource("9_2nhjh")
+
+[node name="BatarangSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(405.00006, 514)
+scale = Vector2(0.17411225, 0.16949508)
+texture = ExtResource("10_bjha6")
+
+[node name="PierscienZLSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(670, 494)
+scale = Vector2(0.16927083, 0.18796296)
+texture = ExtResource("11_gt76g")
+
+[node name="KamiennyMieczSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(186, 751)
+scale = Vector2(0.165625, 0.17870371)
+texture = ExtResource("12_1fr6y")
+
+[node name="DiamentowyMieczSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(397.00012, 739.00006)
+scale = Vector2(0.2138158, 0.20068808)
+texture = ExtResource("13_2hxjc")
+
+[node name="NetheriteMieczSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(641, 736)
+scale = Vector2(0.22516535, 0.21061227)
+texture = ExtResource("14_ebxd8")
+
+[node name="MieczSwietlnySprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(157.9261, 962.2636)
+scale = Vector2(0.20111862, 0.15048833)
+texture = ExtResource("15_2u7jv")
+
+[node name="PlaszczSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(395, 946)
+scale = Vector2(0.14583336, 0.19444443)
+texture = ExtResource("16_24dk6")
+
+[node name="HolocronSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("17_mryly")
 
 [node name="ScoreLabel" type="Label" parent="."]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
-offset_left = 517.0
-offset_top = 337.0
-offset_right = 946.0
-offset_bottom = 442.0
+offset_left = 835.0
+offset_top = 85.0
+offset_right = 1071.0
+offset_bottom = 190.0
 
 [node name="ClickButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 524.0
-offset_top = 467.0
-offset_right = 761.0
-offset_bottom = 675.0
+offset_left = 828.0
+offset_top = 191.0
+offset_right = 1065.0
+offset_bottom = 399.0
 icon = ExtResource("2_q6r6c")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -71,6 +155,7 @@ grow_horizontal = 0
 icon = ExtResource("3_kdubu")
 
 [node name="ShopPanel" type="Panel" parent="CanvasLayer"]
+visible = false
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
