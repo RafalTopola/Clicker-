@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://0oln7vwayml6"]
+[gd_scene load_steps=10 format=3 uid="uid://0oln7vwayml6"]
 
 [ext_resource type="Script" uid="uid://c03mybcp0lhde" path="res://Main.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://cqxpjurax1itf" path="res://Pokoj_Nerda.png" id="2_kdubu"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cn6d8q4gf5mxe" path="res://Grafiki/Ulepszenia (przedmioty)/Puppet.png" id="4_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://erwp3df4whqk" path="res://Grafiki/Ulepszenia (przedmioty)/PurpleGuy.png" id="5_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://d1ttju3x22inw" path="res://icon_temp/close.svg" id="5_rj586"]
+[ext_resource type="Texture2D" uid="uid://bda88n5kdx6r1" path="res://icon_temp/buff_2.svg" id="9_4d7sh"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -23,6 +24,7 @@ offset_bottom = 40.0
 texture = ExtResource("2_kdubu")
 
 [node name="MaskaFreddySprite" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1563.9999, 535)
 scale = Vector2(0.2138158, 0.20068808)
 texture = ExtResource("3_rj586")
@@ -100,3 +102,18 @@ offset_top = 956.0
 offset_right = 662.0
 offset_bottom = 1030.0
 icon = ExtResource("5_rj586")
+
+[node name="PrestigeButton" type="Button" parent="CanvasLayer/ShopPanel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 959.0
+offset_right = 104.0
+offset_bottom = 1047.0
+icon = ExtResource("9_4d7sh")
+
+[node name="PrestigePointsLabel" type="Label" parent="CanvasLayer/ShopPanel"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 956.0
+offset_right = 359.0
+offset_bottom = 1048.0

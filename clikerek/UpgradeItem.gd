@@ -9,20 +9,21 @@ var description: String
 var base_cost: float
 var cost_multiplier: float
 var effect_type: TYPE
-var effect_value: float
-var icon_path: String # <-- Nowość: ścieżka do ikonki
+var base_power: float
+var icon_path: String 
 
 var level: int = 0
 var current_cost: float
+var item_tier: int = 1
 
-func _init(_id: int, _name: String, _description: String, _cost: float, _mult: float, _type: TYPE, _value: float, _icon: String = ""):
+func _init(_id: int, _name: String, _description: String, _cost: float, _mult: float, _type: TYPE, _power: float, _icon: String = ""):
 	self.id = _id
 	self.item_name = _name
 	self.description = _description
 	self.base_cost = _cost
 	self.cost_multiplier = _mult
 	self.effect_type = _type
-	self.effect_value = _value
+	self.base_power = _power
 	self.icon_path = _icon
 	self.current_cost = _cost
 
@@ -37,10 +38,14 @@ func buy() -> bool:
 func apply_effect():
 	match effect_type:
 		TYPE.PASSIVE_INCOME:
-			GameManager.add_passive_income(effect_value)
+			GameManager.add_passive_income(base_power)
 		TYPE.CLICK_VALUE_FLAT:
-			GameManager.add_click_value_flat(effect_value)
+			GameManager.add_click_value_flat(base_power)
 		TYPE.CLICK_VALUE_MULT:
-			GameManager.add_click_value_mult(effect_value)
+			GameManager.add_click_value_mult(base_power)
 		TYPE.CLICK_AMOUNT_FLAT:
-			GameManager.add_click_amount_flat(int(effect_value))
+			GameManager.add_click_amount_flat(int(base_power))
+
+func evolve_tier():
+	item_tier += 1
+	base_power *= 2.0 # Każdy tier podwaja skuteczność bazową ulepszenia!

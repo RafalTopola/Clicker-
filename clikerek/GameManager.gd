@@ -13,7 +13,8 @@ var passive_income: float = 0.0
 
 func _process(delta: float) -> void:
 	if passive_income > 0.0:
-		add_score(passive_income * delta)
+		score += passive_income * delta
+		score_changed.emit(score)
 
 # Funkcja wywoływana przez przycisk klikania
 func handle_click():
@@ -52,3 +53,40 @@ func add_click_value_mult(value: float):
 func add_click_amount_flat(value: int):
 	click_amount_bonus += value # Np. +1 do ilości (z x1 na x2)
 	stats_changed.emit()
+var prestige_points: int = 0
+# Słownik przechowujący wyższe tiery ulepszeń, np. { id_ulepszenia: poziom_tieru }
+var upgraded_tiers: Dictionary = {} 
+
+func do_prestige():
+	# 1. Warunek prestiżu (np. czy gracz ma odpowiednio dużo punktów na reset)
+	if score < 1000: # Próg przykładowy, możesz dostosować
+		return
+		
+	# 2. Przyznanie punktu/punktów prestiżu
+	prestige_points += 1
+	
+	# 3. Reset standardowego postępu
+	score = 0.0
+	# (Wszystkie poziomy ulepszeń w tablicy all_upgrades też trzeba będzie wyzerować)
+	
+	score_changed.emit(score)
+	
+
+func reset_for_prestige():
+	# Przyznajemy punkty prestiżu np. na podstawie tego, ile punktów gracz zdobył (np. 1 punkt za każde 1000 punktów)
+	# Na razie dla testów możemy dać sztywno +1 punkt albo wyliczać z wzoru:
+	var earned_points = int(score / 100.0) # Przykładowy próg do testów
+	if earned_points < 1: 
+		earned_points = 1 # Żeby zawsze coś wpadło przy teście
+		
+	prestige_points += earned_points
+	print("Przyznano punktów prestiżu: ", earned_points, " | Łącznie: ", prestige_points)
+
+	score = 0.0
+	passive_income = 0.0  
+	base_click_value = 1.0
+	click_value_flat_bonus = 0.0  
+	click_value_mult_bonus = 1.0 
+	click_amount_bonus = 1       
+
+	score_changed.emit(score)
