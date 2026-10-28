@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://0oln7vwayml6"]
+[gd_scene format=3 uid="uid://0oln7vwayml6"]
 
 [ext_resource type="Script" uid="uid://c03mybcp0lhde" path="res://Main.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://cqxpjurax1itf" path="res://Pokoj_Nerda.png" id="2_kdubu"]
@@ -21,111 +21,237 @@
 [ext_resource type="Texture2D" uid="uid://dwkppix5ll5q3" path="res://Grafiki/Ulepszenia (przedmioty)/MieczSwietlny.png" id="15_2u7jv"]
 [ext_resource type="Texture2D" uid="uid://d6ye8fdhiljo" path="res://Grafiki/Ulepszenia (przedmioty)/Plaszcz.png" id="16_24dk6"]
 [ext_resource type="Texture2D" uid="uid://u4m4787qr5as" path="res://Grafiki/Ulepszenia (przedmioty)/Holocron.png" id="17_mryly"]
+[ext_resource type="Texture2D" uid="uid://cd11pvse0h0hw" path="res://Grafiki/Ulepszenia (przedmioty)/VaultTec.png" id="18_c4wnb"]
+[ext_resource type="Texture2D" uid="uid://dqg80bk4e2udm" path="res://Grafiki/Ulepszenia (przedmioty)/Atomowka.png" id="19_7plk7"]
+[ext_resource type="Texture2D" uid="uid://d1csovm06f3b7" path="res://Grafiki/Ulepszenia (przedmioty)/PipBoy.png" id="20_fbwgr"]
+[ext_resource type="Texture2D" uid="uid://buos8o20sx0ea" path="res://Grafiki/Ulepszenia (przedmioty)/FigurkaSCP173.png" id="21_7mj2a"]
+[ext_resource type="Texture2D" uid="uid://4tl1kb0iovti" path="res://Grafiki/Ulepszenia (przedmioty)/SCP096.png" id="22_fshgd"]
+[ext_resource type="Texture2D" uid="uid://n14ou4cwkuws" path="res://Grafiki/Ulepszenia (przedmioty)/IdentyfikatorSCP.png" id="23_lbrxf"]
+[ext_resource type="Texture2D" uid="uid://cbdtlraisyyau" path="res://Grafiki/Ulepszenia (przedmioty)/Tarcza.png" id="24_xjt7e"]
+[ext_resource type="Texture2D" uid="uid://dh65eoiilrmgy" path="res://Grafiki/Ulepszenia (przedmioty)/Mlot.png" id="25_0xo8l"]
+[ext_resource type="Texture2D" uid="uid://po5ssa6vgmlj" path="res://Grafiki/Ulepszenia (przedmioty)/Rekawica.png" id="26_xfyss"]
+[ext_resource type="Texture2D" uid="uid://qiffip64v7qf" path="res://Grafiki/Ulepszenia (przedmioty)/Jinx.png" id="27_3ngjr"]
+[ext_resource type="Texture2D" uid="uid://81om4y7l3vwy" path="res://Grafiki/Ulepszenia (przedmioty)/FizzFigurka.png" id="28_qilgh"]
+[ext_resource type="Texture2D" uid="uid://civkqol8ra7dc" path="res://Grafiki/Ulepszenia (przedmioty)/Plecak.png" id="29_4qosj"]
+[ext_resource type="Texture2D" uid="uid://cxpd14eglknau" path="res://Grafiki/Ulepszenia (przedmioty)/HiveTyrant.png" id="30_cjlbh"]
+[ext_resource type="Texture2D" uid="uid://clisegwefiypa" path="res://Grafiki/Ulepszenia (przedmioty)/HorusLupercal.png" id="31_kfelt"]
+[ext_resource type="Texture2D" uid="uid://doduqavrnuiou" path="res://Grafiki/Ulepszenia (przedmioty)/RedSpaceMarine.png" id="32_ytlpd"]
+[ext_resource type="Texture2D" uid="uid://vf0owdkfqrey" path="res://Grafiki/Ulepszenia (przedmioty)/Medalion.png" id="33_2v765"]
+[ext_resource type="Texture2D" uid="uid://s2d1w16tvlcw" path="res://Grafiki/Ulepszenia (przedmioty)/SrebnyMiecz.png" id="34_b8fb0"]
+[ext_resource type="Texture2D" uid="uid://bvlv4prw3e0u8" path="res://Grafiki/Ulepszenia (przedmioty)/Jednorozec.png" id="35_ma08v"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=1884453561]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("1_wtcfe")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=856096394]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_kdubu")
 
-[node name="MaskaFreddySprite" type="Sprite2D" parent="."]
+[node name="MaskaFreddySprite" type="Sprite2D" parent="." unique_id=1519349961]
 visible = false
 position = Vector2(169.00012, 97.00009)
 scale = Vector2(0.2138158, 0.20068808)
 texture = ExtResource("3_rj586")
 
-[node name="PuppetSprite" type="Sprite2D" parent="."]
+[node name="PuppetSprite" type="Sprite2D" parent="." unique_id=999629507]
 visible = false
 position = Vector2(387.5, 134.75003)
 scale = Vector2(0.24779536, 0.21928887)
 texture = ExtResource("4_4d7sh")
 
-[node name="PurpleGuySprite" type="Sprite2D" parent="."]
+[node name="PurpleGuySprite" type="Sprite2D" parent="." unique_id=41759810]
 visible = false
 position = Vector2(664.00006, 106)
 scale = Vector2(0.26189628, 0.2809245)
 texture = ExtResource("5_ir8iy")
 
-[node name="AWPSprite" type="Sprite2D" parent="."]
+[node name="AWPSprite" type="Sprite2D" parent="." unique_id=215747425]
 visible = false
 position = Vector2(166, 305)
 scale = Vector2(0.16927083, 0.2037037)
 texture = ExtResource("6_7vxoj")
 
-[node name="GlobalEliteSprite" type="Sprite2D" parent="."]
+[node name="GlobalEliteSprite" type="Sprite2D" parent="." unique_id=1696047287]
 visible = false
 position = Vector2(448, 296)
 scale = Vector2(0.16041666, 0.19444445)
 texture = ExtResource("7_ei405")
 
-[node name="KurczakSprite" type="Sprite2D" parent="."]
+[node name="KurczakSprite" type="Sprite2D" parent="." unique_id=1212330259]
 visible = false
 position = Vector2(674, 279)
 scale = Vector2(0.2138158, 0.20068808)
 texture = ExtResource("8_e8dv2")
 
-[node name="SuperManSprite" type="Sprite2D" parent="."]
+[node name="SuperManSprite" type="Sprite2D" parent="." unique_id=18520720]
 visible = false
 position = Vector2(172, 505.99994)
 scale = Vector2(0.19287367, 0.18190853)
 texture = ExtResource("9_2nhjh")
 
-[node name="BatarangSprite" type="Sprite2D" parent="."]
+[node name="BatarangSprite" type="Sprite2D" parent="." unique_id=1868611277]
 visible = false
 position = Vector2(405.00006, 514)
 scale = Vector2(0.17411225, 0.16949508)
 texture = ExtResource("10_bjha6")
 
-[node name="PierscienZLSprite" type="Sprite2D" parent="."]
+[node name="PierscienZLSprite" type="Sprite2D" parent="." unique_id=1055848902]
 visible = false
 position = Vector2(670, 494)
 scale = Vector2(0.16927083, 0.18796296)
 texture = ExtResource("11_gt76g")
 
-[node name="KamiennyMieczSprite" type="Sprite2D" parent="."]
+[node name="KamiennyMieczSprite" type="Sprite2D" parent="." unique_id=355648627]
 visible = false
 position = Vector2(186, 751)
 scale = Vector2(0.165625, 0.17870371)
 texture = ExtResource("12_1fr6y")
 
-[node name="DiamentowyMieczSprite" type="Sprite2D" parent="."]
+[node name="DiamentowyMieczSprite" type="Sprite2D" parent="." unique_id=371452687]
 visible = false
 position = Vector2(397.00012, 739.00006)
 scale = Vector2(0.2138158, 0.20068808)
 texture = ExtResource("13_2hxjc")
 
-[node name="NetheriteMieczSprite" type="Sprite2D" parent="."]
+[node name="NetheriteMieczSprite" type="Sprite2D" parent="." unique_id=2009645159]
 visible = false
 position = Vector2(641, 736)
 scale = Vector2(0.22516535, 0.21061227)
 texture = ExtResource("14_ebxd8")
 
-[node name="MieczSwietlnySprite" type="Sprite2D" parent="."]
+[node name="MieczSwietlnySprite" type="Sprite2D" parent="." unique_id=257874622]
 visible = false
 position = Vector2(157.9261, 962.2636)
 scale = Vector2(0.20111862, 0.15048833)
 texture = ExtResource("15_2u7jv")
 
-[node name="PlaszczSprite" type="Sprite2D" parent="."]
+[node name="PlaszczSprite" type="Sprite2D" parent="." unique_id=1379891384]
 visible = false
 position = Vector2(395, 946)
 scale = Vector2(0.14583336, 0.19444443)
 texture = ExtResource("16_24dk6")
 
-[node name="HolocronSprite" type="Sprite2D" parent="."]
+[node name="HolocronSprite" type="Sprite2D" parent="." unique_id=245024601]
 visible = false
 position = Vector2(661, 946)
 scale = Vector2(0.19270833, 0.18796296)
 texture = ExtResource("17_mryly")
 
-[node name="ScoreLabel" type="Label" parent="."]
+[node name="VaultTecSprite" type="Sprite2D" parent="." unique_id=23925432]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("18_c4wnb")
+
+[node name="AtomowkaSprite" type="Sprite2D" parent="." unique_id=75394035]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("19_7plk7")
+
+[node name="PipBoySprite" type="Sprite2D" parent="." unique_id=991671281]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("20_fbwgr")
+
+[node name="FigurkaSCP173Sprite" type="Sprite2D" parent="." unique_id=301301494]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("21_7mj2a")
+
+[node name="SCP096Sprite" type="Sprite2D" parent="." unique_id=1116058201]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("22_fshgd")
+
+[node name="IdentyfikatorSCPSprite" type="Sprite2D" parent="." unique_id=288770930]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("23_lbrxf")
+
+[node name="TarczaSprite" type="Sprite2D" parent="." unique_id=1831767302]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("24_xjt7e")
+
+[node name="MlotSprite" type="Sprite2D" parent="." unique_id=292300448]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("25_0xo8l")
+
+[node name="RekawicaSprite" type="Sprite2D" parent="." unique_id=294600097]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("26_xfyss")
+
+[node name="JinxSprite" type="Sprite2D" parent="." unique_id=76736147]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("27_3ngjr")
+
+[node name="FizzFigurkaSprite" type="Sprite2D" parent="." unique_id=1505674600]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("28_qilgh")
+
+[node name="PlecakSprite" type="Sprite2D" parent="." unique_id=1460454698]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("29_4qosj")
+
+[node name="HiveTyrantSprite" type="Sprite2D" parent="." unique_id=501442293]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("30_cjlbh")
+
+[node name="HorusLupercalSprite" type="Sprite2D" parent="." unique_id=314994591]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("31_kfelt")
+
+[node name="RedSpaceMarineSprite" type="Sprite2D" parent="." unique_id=1129593369]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("32_ytlpd")
+
+[node name="MedalionSprite" type="Sprite2D" parent="." unique_id=1778676915]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("33_2v765")
+
+[node name="SrebnyMieczSpirte" type="Sprite2D" parent="." unique_id=166469300]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("34_b8fb0")
+
+[node name="JednorozecSprite" type="Sprite2D" parent="." unique_id=1684427668]
+visible = false
+position = Vector2(661, 946)
+scale = Vector2(0.19270833, 0.18796296)
+texture = ExtResource("35_ma08v")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1647476029]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
 offset_left = 835.0
@@ -133,7 +259,7 @@ offset_top = 85.0
 offset_right = 1071.0
 offset_bottom = 190.0
 
-[node name="ClickButton" type="Button" parent="."]
+[node name="ClickButton" type="Button" parent="." unique_id=1238732168]
 layout_mode = 0
 offset_left = 828.0
 offset_top = 191.0
@@ -141,9 +267,9 @@ offset_right = 1065.0
 offset_bottom = 399.0
 icon = ExtResource("2_q6r6c")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=855942322]
 
-[node name="ShopButton" type="Button" parent="CanvasLayer"]
+[node name="ShopButton" type="Button" parent="CanvasLayer" unique_id=1285645273]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -154,7 +280,7 @@ offset_bottom = 156.0
 grow_horizontal = 0
 icon = ExtResource("3_kdubu")
 
-[node name="ShopPanel" type="Panel" parent="CanvasLayer"]
+[node name="ShopPanel" type="Panel" parent="CanvasLayer" unique_id=1223463337]
 visible = false
 anchors_preset = 11
 anchor_left = 1.0
@@ -165,7 +291,7 @@ offset_right = -2.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/ShopPanel"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/ShopPanel" unique_id=710070737]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -175,12 +301,12 @@ offset_bottom = -180.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ShopPanel/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ShopPanel/ScrollContainer" unique_id=1184322778]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="CloseButton" type="Button" parent="CanvasLayer/ShopPanel"]
+[node name="CloseButton" type="Button" parent="CanvasLayer/ShopPanel" unique_id=1050693904]
 layout_mode = 0
 offset_left = 590.0
 offset_top = 956.0
@@ -188,7 +314,7 @@ offset_right = 662.0
 offset_bottom = 1030.0
 icon = ExtResource("5_rj586")
 
-[node name="PrestigeButton" type="Button" parent="CanvasLayer/ShopPanel"]
+[node name="PrestigeButton" type="Button" parent="CanvasLayer/ShopPanel" unique_id=1484780818]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 959.0
@@ -196,7 +322,7 @@ offset_right = 104.0
 offset_bottom = 1047.0
 icon = ExtResource("9_4d7sh")
 
-[node name="PrestigePointsLabel" type="Label" parent="CanvasLayer/ShopPanel"]
+[node name="PrestigePointsLabel" type="Label" parent="CanvasLayer/ShopPanel" unique_id=259639314]
 layout_mode = 0
 offset_left = 119.0
 offset_top = 956.0

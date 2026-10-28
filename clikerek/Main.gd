@@ -83,6 +83,36 @@ func _populate_shop():
 			"res://Grafiki/Ulepszenia (przedmioty)/MieczSwietlny.png",
 			"res://Grafiki/Ulepszenia (przedmioty)/Plaszcz.png",
 			"res://Grafiki/Ulepszenia (przedmioty)/Holocron.png"
+		],
+		6: [
+			"res://Grafiki/Ulepszenia (przedmioty)/VaultTec.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/Atomowka.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/PipBoy.png"
+		],
+		7: [
+			"res://Grafiki/Ulepszenia (przedmioty)/FigurkaSCP173.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/SCP096.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/Identyfikator.png"
+		],
+		8: [
+			"res://Grafiki/Ulepszenia (przedmioty)/Tarcza.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/Mlot.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/Rekawica.png"
+		],
+		9: [
+			"res://Grafiki/Ulepszenia (przedmioty)/Jinx.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/FizzFigurka.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/Plecak.png"
+		],
+		10: [
+			"res://Grafiki/Ulepszenia (przedmioty)/HiveTyrant.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/HorusLupercal.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/RedSpaceMarine.png"
+		],
+		11: [
+			"res://Grafiki/Ulepszenia (przedmioty)/Medalion.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/SrebnyMiecz.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/Jednorozec.png"
 		]
 	}
 		
@@ -177,6 +207,31 @@ func _check_visual_unlocks(upgrade_id: int, tier: int = 1):
 			if has_node("MieczSwietlnySprite"): $MieczSwietlnySprite.visible = (u_level > 0 and tier == 1)
 			if has_node("PlaszczSprite"): $PlaszczSprite.visible = (u_level > 0 and tier == 2)
 			if has_node("HolocronSprite"): $HolocronSprite.visible = (u_level > 0 and tier == 3)
+		6:
+			if has_node("VaultTecSprite"): $VaultTecSprite.visible = (u_level > 0 and tier == 1)
+			if has_node("AtomowkaSprite"): $AtomowkaSprite.visible = (u_level > 0 and tier == 2)
+			if has_node("PipBoySprite"): $PipBoySprite.visible = (u_level > 0 and tier == 3)
+		7:
+			if has_node("FigurkaSCP173Sprite"): $FigurkaSCP173Sprite.visible = (u_level > 0 and tier == 1)
+			if has_node("SCP096Sprite"): $SCP096Sprite.visible = (u_level > 0 and tier == 2)
+			if has_node("IdentyfikatorSCPSprite"): $IdentyfikatorSCPSprite.visible = (u_level > 0 and tier == 3)
+		8:
+			if has_node("TarczaSprite"): $TarczaSprite.visible = (u_level > 0 and tier == 1)
+			if has_node("MlotSprite"): $MlotSprite.visible = (u_level > 0 and tier == 2)
+			if has_node("RekawicaSprite"): $RekawicaSprite.visible = (u_level > 0 and tier == 3)
+		9:
+			if has_node("JinxSprite"): $JinxSprite.visible = (u_level > 0 and tier == 1)
+			if has_node("FizzFigurkaSprite"): $FizzFigurkaSprite.visible = (u_level > 0 and tier == 2)
+			if has_node("PlecakSprite"): $PlecakSprite.visible = (u_level > 0 and tier == 3)
+		10:
+			if has_node("HiveTyrantSprite"): $HiveTyrantSprite.visible = (u_level > 0 and tier == 1)
+			if has_node("HorusLupercalSprite"): $HorusLupercalSprite.visible = (u_level > 0 and tier == 2)
+			if has_node("RedSpaceMarineSprite"): $RedSpaceMarineSprite.visible = (u_level > 0 and tier == 3)
+		11:
+			if has_node("MedalionSprite"): $MedalionSprite.visible = (u_level > 0 and tier == 1)
+			if has_node("SrebnyMieczSprite"): $SrebnyMieczSprite.visible = (u_level > 0 and tier == 2)
+			if has_node("JednorozecSprite"): $JednorozecSprite.visible = (u_level > 0 and tier == 3)
+			
 func _on_click_pressed() -> void:
 	GameManager.handle_click()
 
