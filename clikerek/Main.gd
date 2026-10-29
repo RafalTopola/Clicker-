@@ -53,6 +53,12 @@ func _define_upgrades():
 	all_upgrades.append(ClickUpgrade.new(3, "Mocniejsza Ręka", "Twoje kliknięcia liczą się podwójnie.", 100.0, 1.5, 1, "res://Grafiki/Ulepszenia (przedmioty)/SuperMan.png", ClickUpgrade.CLICK_TYPE.AMOUNT))
 	all_upgrades.append(ClickUpgrade.new(4, "Lepszy Wzmacniacz", "Stały bonus do wartości kliknięcia.", 75.0, 1.2, 1.0, "res://Grafiki/Ulepszenia (przedmioty)/KamiennyMiecz.png", ClickUpgrade.CLICK_TYPE.FLAT))
 	all_upgrades.append(ClickUpgrade.new(5, "Błyskawiczny Mnożnik", "Każde kliknięcie jest o 10% mocniejsze.", 200.0, 1.3, 0.1, "res://Grafiki/Ulepszenia (przedmioty)/MieczSwietlny.png", ClickUpgrade.CLICK_TYPE.MULT))
+	all_upgrades.append(PassiveUpgrade.new(6, "Terminal Vault-Tec", "Automatyczny system zarządzania.", 500.0, 1.25, 8.0, "res://Grafiki/Ulepszenia (przedmioty)/VaultTec.png"))
+	all_upgrades.append(PassiveUpgrade.new(7, "Przechowalnia SCP", "Zabezpieczone anomalie generują energię.", 1200.0, 1.3, 20.0, "res://Grafiki/Ulepszenia (przedmioty)/FigurkaSCP173.png"))
+	all_upgrades.append(ClickUpgrade.new(8, "Wibrujący Młot", "Wzmocnienie uderzeń.", 2500.0, 1.35, 5.0, "res://Grafiki/Ulepszenia (przedmioty)/Tarcza.png", ClickUpgrade.CLICK_TYPE.FLAT))
+	all_upgrades.append(PassiveUpgrade.new(9, "Hextechowy Wynalazek", "Zaawansowana technologia.", 5000.0, 1.4, 50.0, "res://Grafiki/Ulepszenia (przedmioty)/Jinx.png"))
+	all_upgrades.append(PassiveUpgrade.new(10, "Flota Tyranidów", "Ogromny pasywny przychód z pochłaniania.", 12000.0, 1.45, 120.0, "res://Grafiki/Ulepszenia (przedmioty)/HiveTyrant.png"))
+	all_upgrades.append(ClickUpgrade.new(11, "Srebrny Miecz", "Potężny cios.", 25000.0, 1.5, 25.0, "res://Grafiki/Ulepszenia (przedmioty)/Medalion.png", ClickUpgrade.CLICK_TYPE.FLAT))
 
 func _populate_shop():
 	for child in upgrades_container.get_children():
@@ -92,7 +98,7 @@ func _populate_shop():
 		7: [
 			"res://Grafiki/Ulepszenia (przedmioty)/FigurkaSCP173.png",
 			"res://Grafiki/Ulepszenia (przedmioty)/SCP096.png",
-			"res://Grafiki/Ulepszenia (przedmioty)/Identyfikator.png"
+			"res://Grafiki/Ulepszenia (przedmioty)/IdentyfikatorSCP.png"
 		],
 		8: [
 			"res://Grafiki/Ulepszenia (przedmioty)/Tarcza.png",
@@ -106,8 +112,8 @@ func _populate_shop():
 		],
 		10: [
 			"res://Grafiki/Ulepszenia (przedmioty)/HiveTyrant.png",
-			"res://Grafiki/Ulepszenia (przedmioty)/HorusLupercal.png",
-			"res://Grafiki/Ulepszenia (przedmioty)/RedSpaceMarine.png"
+			"res://Grafiki/Ulepszenia (przedmioty)/RedSpaceMarine.png",
+			"res://Grafiki/Ulepszenia (przedmioty)/HorusLupercal.png"
 		],
 		11: [
 			"res://Grafiki/Ulepszenia (przedmioty)/Medalion.png",
