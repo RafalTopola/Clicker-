@@ -8,12 +8,14 @@ extends Control
 @onready var upgrades_container: VBoxContainer = $CanvasLayer/ShopPanel/ScrollContainer/VBoxContainer
 @onready var prestige_button: Button = $CanvasLayer/ShopPanel/PrestigeButton
 @onready var prestige_label: Label = $CanvasLayer/ShopPanel/PrestigePointsLabel
+@onready var custom_cursor: TextureRect = $CanvasLayer/CustomCursor
 
 var all_upgrades: Array[UpgradeItem] = []
 
 func _ready() -> void:
 	GameManager.score_changed.connect(_update_ui)
 	GameManager.stats_changed.connect(_update_stats_display) 
+	
 	
 	click_button.pressed.connect(_on_click_pressed)
 	shop_button.pressed.connect(_on_shop_button_pressed)
@@ -24,6 +26,7 @@ func _ready() -> void:
 	close_button.visible = false
 	shop_button.visible = true
 	
+	hide_mouse()
 	_define_upgrades()
 	_populate_shop()
 	_update_ui(GameManager.score)
@@ -41,6 +44,25 @@ func _ready() -> void:
 	debug_btn.pressed.connect(func(): GameManager.add_score(1000.0))
 	shop_panel.add_child(debug_btn)
 	debug_btn.position = Vector2(20, 600)
+
+#Nowa funkcja do ukrywania standardowego kursora
+func hide_mouse() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	if custom_cursor:
+		custom_cursor.visible = true
+	
+# Płynne podążanie kursora za pozycją myszy
+func cursor_movement(_delta: float) -> void:
+	if custom_cursor:
+		custom_cursor.global_position = get_global_mouse_position()
+		custom_cursor.move_to_front()
+
+# Obsługa klikania w dowolnym miejscu ekranu
+func click_everywhere(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if shop_panel.visible:
+			return
+		GameManager.handle_click()
 
 func _update_prestige_display():
 	var label = shop_panel.get_node_or_null("PrestigePointsLabel")
@@ -292,3 +314,10 @@ func debug_inspect_upgrades():
 		# Pobieramy listę metod dostępnych w obiekcie (Refleksja)
 		if upgrade.has_method("apply_effect"):
 			print("-> Posiada metodę apply_effect()")
+
+# dwie funkcje wbudowane (Potrzebne do CustomCursor)
+func _process(delta: float) -> void:
+	cursor_movement(delta)
+
+func _unhandled_input(event: InputEvent) -> void:
+	click_everywhere(event)

@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://0oln7vwayml6"]
 
 [ext_resource type="Script" uid="uid://c03mybcp0lhde" path="res://Main.gd" id="1_wtcfe"]
-[ext_resource type="Texture2D" uid="uid://cqxpjurax1itf" path="res://Pokoj_Nerda.png" id="2_kdubu"]
+[ext_resource type="Texture2D" uid="uid://cmxpjtw8ckf4c" path="res://Grafiki/Kursor/Kursor.png" id="2_7plk7"]
+[ext_resource type="Texture2D" uid="uid://bn6tsm5gnw614" path="res://Grafiki/Tło/PokojNerda.png" id="2_c4wnb"]
 [ext_resource type="Texture2D" uid="uid://dkrv0dvj068x7" path="res://icon_temp/click.svg" id="2_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://cnn5tdcdr6pot" path="res://icon_temp/shop.svg" id="3_kdubu"]
 [ext_resource type="Texture2D" uid="uid://br623eqtt0mh1" path="res://Grafiki/Ulepszenia (przedmioty)/MaskaFreddy.png" id="3_rj586"]
@@ -45,13 +46,15 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+mouse_filter = 2
 script = ExtResource("1_wtcfe")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=856096394]
+[node name="Background" type="TextureRect" parent="." unique_id=856096394]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_kdubu")
+mouse_filter = 2
+texture = ExtResource("2_c4wnb")
 
 [node name="MaskaFreddySprite" type="Sprite2D" parent="." unique_id=1519349961]
 visible = false
@@ -260,6 +263,7 @@ offset_right = 1071.0
 offset_bottom = 190.0
 
 [node name="ClickButton" type="Button" parent="." unique_id=1238732168]
+visible = false
 layout_mode = 0
 offset_left = 828.0
 offset_top = 191.0
@@ -328,3 +332,10 @@ offset_left = 119.0
 offset_top = 956.0
 offset_right = 359.0
 offset_bottom = 1048.0
+
+[node name="CustomCursor" type="TextureRect" parent="CanvasLayer" unique_id=832014444]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("2_7plk7")
+expand_mode = 1
