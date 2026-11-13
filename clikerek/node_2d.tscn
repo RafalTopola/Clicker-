@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d1ttju3x22inw" path="res://icon_temp/close.svg" id="5_rj586"]
 [ext_resource type="Texture2D" uid="uid://deup2oqe5ntlg" path="res://Grafiki/Ulepszenia (przedmioty)/AWP.png" id="6_7vxoj"]
 [ext_resource type="Texture2D" uid="uid://cb3trn2b1h10q" path="res://Grafiki/Ulepszenia (przedmioty)/GlobalElite.png" id="7_ei405"]
-[ext_resource type="Texture2D" uid="uid://djgwoevb6ug1g" path="res://Grafiki/Ulepszenia (przedmioty)/Kurczak.png" id="8_e8dv2"]
+[ext_resource type="Texture2D" uid="uid://bdyw61gmoyjfl" path="res://Grafiki/Ulepszenia (przedmioty)/Kurczak.png" id="8_e8dv2"]
 [ext_resource type="Texture2D" uid="uid://bxdidu8vt6qp3" path="res://Grafiki/Ulepszenia (przedmioty)/SuperMan.png" id="9_2nhjh"]
 [ext_resource type="Texture2D" uid="uid://bda88n5kdx6r1" path="res://icon_temp/buff_2.svg" id="9_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://ctm7cx7kp8hm0" path="res://Grafiki/Ulepszenia (przedmioty)/Batarang.png" id="10_bjha6"]
@@ -41,6 +41,10 @@
 [ext_resource type="Texture2D" uid="uid://s2d1w16tvlcw" path="res://Grafiki/Ulepszenia (przedmioty)/SrebnyMiecz.png" id="34_b8fb0"]
 [ext_resource type="Texture2D" uid="uid://bvlv4prw3e0u8" path="res://Grafiki/Ulepszenia (przedmioty)/Jednorozec.png" id="35_ma08v"]
 [ext_resource type="Texture2D" uid="uid://cicq61xnrhj1l" path="res://Grafiki/Waluta/Ramka-Ziko.png" id="36_fbwgr"]
+[ext_resource type="Texture2D" uid="uid://chb6q15hwctic" path="res://Grafiki/Sklep/Tlo_Sklepu.png" id="39_7mj2a"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lq3dq"]
+texture = ExtResource("39_7mj2a")
 
 [node name="Control" type="Control" unique_id=1884453561]
 layout_mode = 3
@@ -296,23 +300,27 @@ grow_horizontal = 0
 icon = ExtResource("3_kdubu")
 
 [node name="ShopPanel" type="Panel" parent="CanvasLayer" unique_id=1223463337]
-visible = false
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -713.0
-offset_right = -2.0
+offset_left = -721.0
+offset_top = -66.0
+offset_right = 59.0
+offset_bottom = 29.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lq3dq")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/ShopPanel" unique_id=710070737]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -161.0
-offset_bottom = -180.0
+offset_left = 87.0
+offset_top = 211.0
+offset_right = -94.0
+offset_bottom = -186.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -323,18 +331,18 @@ size_flags_vertical = 3
 
 [node name="CloseButton" type="Button" parent="CanvasLayer/ShopPanel" unique_id=1050693904]
 layout_mode = 0
-offset_left = 590.0
-offset_top = 956.0
-offset_right = 662.0
-offset_bottom = 1030.0
+offset_left = 611.0
+offset_top = 1043.0
+offset_right = 683.0
+offset_bottom = 1117.0
 icon = ExtResource("5_rj586")
 
 [node name="PrestigeButton" type="Button" parent="CanvasLayer/ShopPanel" unique_id=1484780818]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 959.0
-offset_right = 104.0
-offset_bottom = 1047.0
+offset_left = 86.0
+offset_top = 1040.0
+offset_right = 158.0
+offset_bottom = 1128.0
 icon = ExtResource("9_4d7sh")
 
 [node name="PrestigePointsLabel" type="Label" parent="CanvasLayer/ShopPanel" unique_id=259639314]

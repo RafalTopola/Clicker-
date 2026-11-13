@@ -146,10 +146,30 @@ func _populate_shop():
 		
 	for upgrade in all_upgrades:
 		var panel = PanelContainer.new()
-		panel.custom_minimum_size = Vector2(0, 90)
+		panel.custom_minimum_size = Vector2(0, 175)
+		
+		var style = StyleBoxTexture.new()
+		style.texture = load("res://Grafiki/Sklep/Ramka_Przedmiotu.png")
+		panel.add_theme_stylebox_override("panel", style)
 		
 		var hbox = HBoxContainer.new()
 		panel.add_child(hbox)
+		
+		var icon_container = Control.new()
+		icon_container.custom_minimum_size = Vector2(90, 90)
+		icon_container.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		
+		var icon_panel = Panel.new()
+		icon_panel.custom_minimum_size = Vector2(90, 90)
+		icon_panel.size = Vector2(90, 90)
+		
+		var icon_style = StyleBoxTexture.new()
+		icon_style.texture = load("res://Grafiki/Sklep/Ramka_Grafiki_Przedmiotu.png")
+		icon_style.content_margin_left = 6
+		icon_style.content_margin_right = 6
+		icon_style.content_margin_top = 6
+		icon_style.content_margin_bottom = 6
+		icon_panel.add_theme_stylebox_override("panel", icon_style)
 		
 		var icon_rect = TextureRect.new()
 		icon_rect.custom_minimum_size = Vector2(70, 70)
@@ -166,7 +186,13 @@ func _populate_shop():
 			var tex = load(current_icon_path)
 			if tex:
 				icon_rect.texture = tex
-		hbox.add_child(icon_rect)
+		
+		# Ramka oraz ikona do wspólnego kontenera nakładkowego
+		icon_container.add_child(icon_panel)
+		icon_container.add_child(icon_rect)
+		
+		# Wrzucenie gotowego kontenera do głównego wiersza
+		hbox.add_child(icon_container)
 		
 		var info_vbox = VBoxContainer.new()
 		info_vbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL
