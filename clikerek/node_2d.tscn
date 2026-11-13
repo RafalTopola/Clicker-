@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://vf0owdkfqrey" path="res://Grafiki/Ulepszenia (przedmioty)/Medalion.png" id="33_2v765"]
 [ext_resource type="Texture2D" uid="uid://s2d1w16tvlcw" path="res://Grafiki/Ulepszenia (przedmioty)/SrebnyMiecz.png" id="34_b8fb0"]
 [ext_resource type="Texture2D" uid="uid://bvlv4prw3e0u8" path="res://Grafiki/Ulepszenia (przedmioty)/Jednorozec.png" id="35_ma08v"]
+[ext_resource type="Texture2D" uid="uid://cicq61xnrhj1l" path="res://Grafiki/Waluta/Ramka-Ziko.png" id="36_fbwgr"]
 
 [node name="Control" type="Control" unique_id=1884453561]
 layout_mode = 3
@@ -254,13 +255,23 @@ position = Vector2(661, 946)
 scale = Vector2(0.19270833, 0.18796296)
 texture = ExtResource("35_ma08v")
 
-[node name="ScoreLabel" type="Label" parent="." unique_id=1647476029]
+[node name="ZikoFrame" type="TextureRect" parent="." unique_id=444647054]
+layout_mode = 0
+offset_left = -73.0
+offset_top = -46.0
+offset_right = 527.0
+offset_bottom = 254.0
+texture = ExtResource("36_fbwgr")
+expand_mode = 3
+
+[node name="ScoreLabel" type="Label" parent="ZikoFrame" unique_id=1647476029]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
-offset_left = 835.0
-offset_top = 85.0
-offset_right = 1071.0
-offset_bottom = 190.0
+offset_left = 250.0
+offset_top = 90.0
+offset_right = 500.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 64
 
 [node name="ClickButton" type="Button" parent="." unique_id=1238732168]
 visible = false

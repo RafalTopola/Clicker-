@@ -1,6 +1,6 @@
 extends Control
 
-@onready var score_label: Label = $ScoreLabel
+@onready var score_label: Label = $ZikoFrame/ScoreLabel
 @onready var click_button: Button = $ClickButton
 @onready var shop_panel: Panel = $CanvasLayer/ShopPanel
 @onready var shop_button: Button = $CanvasLayer/ShopButton
@@ -264,7 +264,7 @@ func _on_click_pressed() -> void:
 	GameManager.handle_click()
 
 func _update_ui(new_score: float) -> void:
-	score_label.text = "Punkty: " + str(snapped(new_score, 0.1))
+	score_label.text = str(snapped(new_score, 0.1))
 
 func _update_stats_display():
 	pass
