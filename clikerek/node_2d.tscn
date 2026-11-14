@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://bvlv4prw3e0u8" path="res://Grafiki/Ulepszenia (przedmioty)/Jednorozec.png" id="35_ma08v"]
 [ext_resource type="Texture2D" uid="uid://cicq61xnrhj1l" path="res://Grafiki/Waluta/Ramka-Ziko.png" id="36_fbwgr"]
 [ext_resource type="Texture2D" uid="uid://chb6q15hwctic" path="res://Grafiki/Sklep/Tlo_Sklepu.png" id="39_7mj2a"]
+[ext_resource type="AudioStream" uid="uid://cytji3x04eeuf" path="res://Muzyka/Merry Go - Silent Film Light - Kevin MacLeod.mp3" id="43_fshgd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lq3dq"]
 texture = ExtResource("39_7mj2a")
@@ -358,3 +359,9 @@ offset_bottom = 40.0
 mouse_filter = 2
 texture = ExtResource("2_7plk7")
 expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1115349894]
+stream = ExtResource("43_fshgd")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
